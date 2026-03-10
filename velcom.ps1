@@ -2,7 +2,7 @@
 # Developed and Owned by Velcom (Private)
 # Version: 1.0
 
-$CurrentVersion = "1.0"
+$CurrentVersion = "1.1"
 $UpdateUrl = "https://raw.githubusercontent.com/Pqyuh/velcom-tool/refs/heads/main/velcom.ps1" # استبدل هذا بالرابط الخام لملفك على GitHub
 
 ## Configure this
@@ -287,3 +287,4 @@ Log "INFO" "Restarting game launcher..."
 Log "WARN" "Optimization in progress, please do not close this window."
 Log "OK" "Velcom is now active."
 Log "AUX" "Powered by Velcom."
+
