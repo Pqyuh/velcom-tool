@@ -3,7 +3,7 @@
 # Version: 1.0
 
 $CurrentVersion = "1.0"
-$UpdateUrl = "YOUR_RAW_GITHUB_URL_HERE" # استبدل هذا بالرابط الخام لملفك على GitHub
+$UpdateUrl = "https://raw.githubusercontent.com/Pqyuh/velcom-tool/refs/heads/main/velcom.ps1" # استبدل هذا بالرابط الخام لملفك على GitHub
 
 ## Configure this
 $Host.UI.RawUI.WindowTitle = "VELCOM PRIVATE INSTALLER V$CurrentVersion"
@@ -14,7 +14,7 @@ $milleniumTimer = 5 # in seconds for auto-installation
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 chcp 65001 > $null
 
-function Check-ForUpdates {
+function Update-Velcom {
     try {
         $RemoteContent = (Invoke-WebRequest -Uri $UpdateUrl -UseBasicParsing -TimeoutSec 5 -ErrorAction SilentlyContinue).Content
         if ($RemoteContent -match '# Version: (\d+\.\d+)') {
@@ -75,7 +75,7 @@ Log "OK" "     OWNED & DEVELOPED BY VELCOM          "
 Log "OK" "=========================================="
 Log "INFO" "Authenticated: Velcom Private System"
 Log "AUX" "Property of Velcom"
-Check-ForUpdates
+Update-Velcom
 Write-Host
 
 # To hide IEX blue box thing
